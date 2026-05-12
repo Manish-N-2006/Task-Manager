@@ -12,7 +12,8 @@ def create_app():
     db.init_app(app)
 
     from app.models import tasks
-    
+    from app.routes import register_routes
+    register_routes(app)
 
     @app.route("/")
     def home():
