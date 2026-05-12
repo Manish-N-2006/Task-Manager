@@ -11,6 +11,9 @@ def create_app():
 
     db.init_app(app)
 
+    from app.models import tasks
+    
+
     @app.route("/")
     def home():
         return {
